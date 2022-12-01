@@ -1,4 +1,4 @@
-with open('input') as file:
+with open('Day1/input') as file:
     lines = file.readlines()
 
 elfCalorieList = [0]
@@ -11,14 +11,11 @@ for line in lines:
         #this means that we add the calories to the current elf
         elfCalorieList[len(elfCalorieList)-1] += int(line)
 
-TopThreeCal = max(elfCalorieList)
-print("the most calories are " , max(elfCalorieList) , "on elf", elfCalorieList.index(max(elfCalorieList)))
-elfCalorieList[elfCalorieList.index(max(elfCalorieList))] = 0
-TopThreeCal += max(elfCalorieList)
-print("the second most calories are " , max(elfCalorieList) , "on elf", elfCalorieList.index(max(elfCalorieList)))
-elfCalorieList[elfCalorieList.index(max(elfCalorieList))] = 0
-TopThreeCal += max(elfCalorieList)
-print("the third calories are " , max(elfCalorieList) , "on elf", elfCalorieList.index(max(elfCalorieList)))
+TopThreeCal = 0
+for i in range(3):
+    TopThreeCal += max(elfCalorieList)
+    print("the most calories are " , max(elfCalorieList) , "on elf", elfCalorieList.index(max(elfCalorieList)))
+    elfCalorieList[elfCalorieList.index(max(elfCalorieList))] = 0
 print("the sum of the top three calories is ", TopThreeCal)
 
 
