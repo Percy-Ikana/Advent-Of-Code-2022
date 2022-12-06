@@ -16,8 +16,8 @@ with open('Day6/input') as file:
     commLength = [4, 14]
     partsSolved = [False for x in commLength]
     lastSize = 0
-    #while both problems not solved. Only part 2 needs to be checked since part 2 is also a solution to part 1
-    while not partsSolved[1]:
+    #while both problems not solved
+    while not all(partsSolved):
         lastSize = len(inputList)
         inputList = inputList + file.read(1)
         #break if we are done with the file, or if no \n, if the string is the same size as last loop
