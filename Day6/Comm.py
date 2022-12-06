@@ -13,8 +13,8 @@ with open('Day6/input') as file:
     start_time = time.time()
     #read 3 elements, this isnt needed, but like, why not?
     inputList = file.read(3)
-    partsSolved = [False, False]
     commLength = [4, 14]
+    partsSolved = [False for x in commLength]
     lastSize = 0
     #while both problems not solved. Only part 2 needs to be checked since part 2 is also a solution to part 1
     while not partsSolved[1]:
