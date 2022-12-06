@@ -1,5 +1,4 @@
 import time
-import itertools
 import copy
 
 with open('Day5/input') as file:
@@ -27,16 +26,16 @@ for j in range(len(inputList[0][0])):
 #make a list for the part2 problem
 problem2BoxList = copy.deepcopy(boxesList)
 
-
+ 
 for instruction in craneInstructions:
     #part 1 solution, pop box off top of origin, append to dest, repeat however many times the instruction wants.
     for move in range(instruction[0]):
         boxesList[instruction[2]].append(boxesList[instruction[1]].pop())
 
     #part 2
-    #slice the last X elements from the orgin stack, and put on the dest stack
+    #slice the last X elements from the orgin stack, and put on the dest stack. This would also work for part1, if we reverse the list, but I like keeping the pop/place
     [problem2BoxList[instruction[2]].append(_) for _ in problem2BoxList[instruction[1]][-instruction[0]:]]
-    #remove the boxes form the origin stack
+    #remove the boxes from the origin stack
     del problem2BoxList[instruction[1]][-instruction[0]:]
     
 
