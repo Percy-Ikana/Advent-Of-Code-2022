@@ -83,7 +83,7 @@ for key in sizeDict:
             smallestDeleteDir = key
 
 #part1
-print("Files under 100,000: ", totalUnderHundoK)
+print("Sum OF dirs with a size under 100,000: ", totalUnderHundoK)
 #part2
 print("The smallest dir that can be deleted for the update is " , 
     smallestDeleteDir, " with a size of ",sizeDict[smallestDeleteDir])
