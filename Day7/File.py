@@ -10,10 +10,10 @@ start_time = time.time()
 #   - ls
 #dir
 #   - directory name
-#numbers (file size)
+#numbers (filesize)
 #   - filename
 
-#inital setup, since we start in
+#inital setup, since we start in /, and I dont feel like making a special case / setup in cd /
 currentDir = '/'
 fileDict = {'/': []}
 sizeDict = {'/': 0}
@@ -22,9 +22,8 @@ for i in range(len(inputList)):
     input = inputList[i].split()
     if input[0] == '$':
         #this is a command, either a cd or ls
-        #I actually dont thik we care about doing anything with ls
         if input[1] == "cd":
-            #we not need to change into the specified directory, if it exists
+            #we need to change into the specified directory, if it exists
             if input[2] == '/':
                 #back to root. This is actually pointless, it only seems to occur once, at the start
                 currentDir = '/'
@@ -83,7 +82,7 @@ for key in sizeDict:
             smallestDeleteDir = key
 
 #part1
-print("Sum OF dirs with a size under 100,000: ", totalUnderHundoK)
+print("Sum of dirs with a size under 100,000: ", totalUnderHundoK)
 #part2
 print("The smallest dir that can be deleted for the update is " , 
     smallestDeleteDir, " with a size of ",sizeDict[smallestDeleteDir])
