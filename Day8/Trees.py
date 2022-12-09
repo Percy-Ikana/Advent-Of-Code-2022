@@ -51,9 +51,7 @@ for row in range(1,len(trees)-1):
                     break
         if topScenic[2] < scenic:
             topScenic = (row, col, scenic)
-
-
-
+            
 print("From the outside you can see", visibleCount, "trees!")
 print("the most scenic tree is at postion (", topScenic[0], "," , topScenic[1], ") with a score of",topScenic[2])
 print("--- %s seconds ---" % (time.time() - start_time))
