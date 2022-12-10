@@ -9,7 +9,7 @@ def detectCommString(str, length):
             return len(str)
     return 0
 
-with open('Day6/input') as file:
+with open('Day06/input') as file:
     start_time = time.time()
     #read 3 elements, this isnt needed, but like, why not?
     inputList = file.read(3)

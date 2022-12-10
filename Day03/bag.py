@@ -1,7 +1,7 @@
 #THIS CODE WAS 100% AI GENEREATED WITH OPEN AI CHATBOT AS A EXCERSIZE, IT IS NOT MY CODE
 #I DO NOT CLAIM IT IS MY CODE
 # Read the input file and split each line into two parts, one for each compartment
-with open('Day3/input', 'r') as input_file:
+with open('Day03/input', 'r') as input_file:
     lines = input_file.readlines()
     comp1_items = [line.strip()[:len(line)//2] for line in lines]
     comp2_items = [line.strip()[len(line)//2:] for line in lines]

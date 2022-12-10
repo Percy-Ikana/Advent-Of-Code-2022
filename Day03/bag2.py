@@ -1,6 +1,6 @@
 #THIS CODE IS MODIFIED FROM PART !, WHICH WAS AI GENERATED
 # Read the input file and split each line into two parts, one for each compartment
-with open('Day3/input', 'r') as input_file:
+with open('Day03/input', 'r') as input_file:
     lines = input_file.readlines()
     lines = [line.strip() for line in lines]
     lineGroup = zip(*[iter(lines)]*3)

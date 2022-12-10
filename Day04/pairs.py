@@ -1,6 +1,6 @@
 import time
 
-with open('Day4/input') as file:
+with open('Day04/input') as file:
     pairList = file.readlines()
 
 start_time = time.time()

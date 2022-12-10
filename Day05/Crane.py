@@ -1,7 +1,7 @@
 import time
 import copy
 
-with open('Day5/input') as file:
+with open('Day05/input') as file:
     inputList = file.read()
 
 start_time = time.time()

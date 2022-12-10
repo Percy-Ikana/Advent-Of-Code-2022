@@ -1,6 +1,6 @@
 import time
 
-with open('Day2/input') as file:
+with open('Day02/input') as file:
     matchList = file.readlines()
 
 start_time = time.time()

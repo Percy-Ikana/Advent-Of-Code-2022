@@ -1,6 +1,6 @@
 import time
 
-with open('Day1/input') as file:
+with open('Day01/input') as file:
     foodList = file.readlines()
 
 start_time = time.time()
