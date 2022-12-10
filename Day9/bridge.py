@@ -43,7 +43,7 @@ def addMove(position, moveTuple):
 
 #discotnary of what each direction means in terms of moving on the grid
 moves = {
-    "L":(-1,0),
+    "L":(-1,0), 
     "R":(1,0),
     "U":(0,1),
     "D":(0,-1)
@@ -64,7 +64,7 @@ for input in inputList:
             diff = distanceBetween(tailList[j-1],tailList[j])
 
             #check if not right next to the previous knot in either directon
-            #I initally checked (diff1 + diff2), but this ended in way more complex logic than handling them seperatly. 
+            #I initally checked abs(diff1 + diff2), but this ended in way more complex logic than handling them seperatly. 
             if abs(diff[0]) == 2 or abs(diff[1]) == 2:
                 addMove(tailList[j] , [sign(diff[0]), sign(diff[1])])
 

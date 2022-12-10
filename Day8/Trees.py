@@ -1,5 +1,7 @@
 import time
 
+#After doind this, i learned of complex, which is this, but built in, whoops.
+
 with open('Day8/input') as file:
     inputList = file.readlines()
 
