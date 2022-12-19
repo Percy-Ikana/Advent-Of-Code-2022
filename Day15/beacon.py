@@ -175,11 +175,7 @@ def fillLines(sensorDict, beaconSet, searchArea):
             adjustedDist = sensorDict[sensor] - distance(sensor, (sensor[0], y))
             if adjustedDist >= 0:
                 singleLine.add((max(x-adjustedDist, searchArea[0][0]), min(x+adjustedDist, searchArea[1][0])))
-        #we have a list of tuples, so now we just need to convert that into a set of ranges
-        #this is every point within the 
-        #for taken in sorted(singleLine):
-        #    for x in range(taken[0], taken[1]+1):
-        #        lines[y].add((x, y))
+        #we have a list of tuples, so now we just need to convert that into a set of continuous ranges
         singleLine = sorted(singleLine)
         actualComp = 1
         for each in range(1, len(singleLine)):
